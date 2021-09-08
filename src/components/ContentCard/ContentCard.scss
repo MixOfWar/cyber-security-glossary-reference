@@ -1,0 +1,184 @@
+// color variables
+$main: #183054;
+$secondary: #94cdbd;
+$accent: #fcc44c;
+$main-text: #ffffff;
+$sec-text: #0a0a0a;
+
+.contentCard {
+  background: $secondary;
+  color: $sec-text;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  &:hover {
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.75);
+  }
+  .card-header {
+    font-weight: bold;
+    padding: 5px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .card-subtitile {
+    padding-left: 5px;
+  }
+  .card-body {
+    color: $main-text;
+    margin: 5px;
+    border-radius: 5px;
+    .list-group {
+      .list-group-item {
+        background: $main;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 5px auto;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        &:hover {
+          box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.75);
+        }
+        .innerCard {
+          width: 100%;
+          .card-title {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            h5:nth-of-type(1) {
+              text-align: left;
+              padding-right: 20px;
+            }
+            h5:nth-of-type(2) {
+              text-align: right;
+              padding-left: 20px;
+              color: $accent;
+            }
+          }
+          .card-body {
+            background: $secondary;
+            color: $sec-text;
+            width: 100%;
+            margin: 0;
+            padding: 5px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+          .card-footer {
+            background: $secondary;
+            color: $sec-text;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            a {
+              font-size: small;
+            }
+          }
+        }
+      }
+    }
+  }
+  .card-footer {
+    padding: 10px;
+    a {
+      background: $main;
+      color: $main-text;
+      font-size: small;
+      padding: 5px;
+      margin: 10px auto;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .contentCard {
+    width: 30%;
+    height: fit-content;
+    background: $secondary;
+    color: $sec-text;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    &:hover {
+      box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.75);
+    }
+    .card-header {
+      font-weight: bold;
+      padding: 5px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .card-subtitile {
+      padding-left: 5px;
+    }
+    .card-body {
+      color: $main-text;
+      margin: 5px;
+      border-radius: 5px;
+      .list-group {
+        .list-group-item {
+          background: $main;
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          margin: 5px auto;
+          padding: 5px;
+          border-radius: 5px;
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+          &:hover {
+            box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.75);
+          }
+          .innerCard {
+            width: 100%;
+            .card-title {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              h5:nth-of-type(1) {
+                text-align: left;
+              }
+              h5:nth-of-type(2) {
+                text-align: right;
+                color: $accent;
+              }
+            }
+            .card-body {
+              background: $secondary;
+              color: $sec-text;
+              width: 100%;
+              margin: 0;
+              padding: 5px;
+              border-bottom-left-radius: 0;
+              border-bottom-right-radius: 0;
+            }
+            .card-footer {
+              background: $secondary;
+              color: $sec-text;
+              border-bottom-left-radius: 5px;
+              border-bottom-right-radius: 5px;
+              a {
+                font-size: small;
+              }
+            }
+          }
+        }
+      }
+    }
+    .card-footer {
+      padding: 10px;
+      a {
+        background: $main;
+        color: $main-text;
+        font-size: small;
+        padding: 5px;
+        margin: 10px auto;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
