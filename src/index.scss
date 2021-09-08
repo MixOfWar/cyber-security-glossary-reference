@@ -29,5 +29,7 @@ code {
   .card-group {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: auto;
   }
 }
