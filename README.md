@@ -1,4 +1,4 @@
-This application was created to facilitate a smaller list of commonly used JavaScript for easy reference. Most details are pulled from MDN (https://developer.mozilla.org/en-US/) and Git (https://git-scm.com/). Each piece is directly linked to the MDN or Git that it refers to. This is created with mobile, tablet, and desktop in mind. Please enjoy.
+This application was created to facilitate a cyber security glossary for ease of access and visual control of information.
 
 # Getting Started with Create React App
 
