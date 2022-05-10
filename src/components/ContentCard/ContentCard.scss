@@ -12,10 +12,10 @@ $sec-text: #0a0a0a;
 	border-radius: 5px;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 	&:hover {
-		box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.8);
+		box-shadow: 5px 5px 10px rgba(0, 0, 0, 9);
 		cursor: pointer;
 		.card-header {
-			text-emphasis: filled $secondary;
+			color: $secondary;
 		}
 	}
 	.card-header {
@@ -43,12 +43,15 @@ $sec-text: #0a0a0a;
 				border-radius: 5px;
 				box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 				&:hover {
-					box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.75);
+					box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
 				}
 				.innerCard {
 					width: 100%;
 					&:hover {
-						text-emphasis: filled $secondary;
+						.card-title {
+							text-decoration: underline;
+							color: $accent;
+						}
 					}
 					.card-title {
 						width: 100%;
