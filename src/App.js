@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Container, CardGroup } from 'react-bootstrap';
-import { Header, ContentCard, Filter } from './components';
+import { Header, ContentCard} from './components';
 import data from './data';
 import './App.scss';
 
