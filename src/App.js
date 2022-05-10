@@ -6,16 +6,6 @@ import './App.scss';
 
 function App() {
 	const [contents, setContents] = useState([]);
-	const [filterTerm, setFilterTerm] = useState('');
-  const [filterDefine, setFilterDefine] = useState('');
-  
-  const handleFilterTerm = (input) => {
-    setFilterTerm(input)
-  }
-
-  const handleFilterDefine = (input) => {
-    setFilterDefine(input)
-  }
 
 	useEffect(() => {
 		let newContents = Object.entries(data);
@@ -32,8 +22,6 @@ function App() {
 						<ContentCard
 							name={name}
 							key={index}
-							filterTerm={filterTerm}
-							filterDefine={filterDefine}
 						/>
 					))}
 			</CardGroup>
