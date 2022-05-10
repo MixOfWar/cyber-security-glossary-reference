@@ -22,7 +22,8 @@ $sec-text: #0a0a0a;
 				font-weight: bold;
 				&:hover {
 					text-decoration: underline;
-          cursor: pointer;
+					cursor: pointer;
+					text-emphasis: filled $secondary;
 				}
 			}
 			input {
