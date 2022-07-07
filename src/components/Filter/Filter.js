@@ -3,12 +3,12 @@ import "./Filter.scss"
 import { useState, useEffect } from "react"
 
 const Filter = ({ type, filter, data, setKeywordValue }) => {
-  console.log(data)
+  // console.log(data)
   const [filtered, setFiltered] = useState([])
 
   useEffect(() => {
     let newContents = Object.entries(data)
-    console.log(newContents)
+    // console.log(newContents)
     setFiltered(newContents)
   }, [data])
 

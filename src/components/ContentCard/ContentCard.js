@@ -13,7 +13,7 @@ const ContentCard = ({ name }) => {
 
   useEffect(() => {
     let newTerms = Object.entries(name[1])
-    console.log(newTerms)
+    // console.log(newTerms)
     setTerms(newTerms.sort())
     //eslint-disable-next-line
   }, [])
