@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, createContext } from "react"
 import { Container, CardGroup } from "react-bootstrap"
 import { Header, ContentCard, Filter } from "./components"
 import data from "./data"
@@ -7,25 +7,54 @@ import "./App.scss"
 function App() {
   const [contents, setContents] = useState([])
   const [keywordValue, setKeywordValue] = useState("")
+
   useEffect(() => {
     let newContents = Object.entries(data)
     setContents(newContents)
   }, [])
 
+  // CONTEXT FOR DATA, FILTERING WORD, FILTERING DEFINTION, COMBINING WORD AND DEFINTION INTO RESULTS,
+  // AND SENDING RESULTS TO CONTENT CARD
+
   return (
     <Container className="App">
       <Header />
       <Filter data={data} setKeywordValue={setKeywordValue} />
-      {/* {console.log(keywordValue)} */}
       <CardGroup>
         {data &&
-          contents.map((name, index) => (
-            <div>
-              <ContentCard name={name} key={index} />
-              {console.log(Object.values(name[1]).includes(keywordValue))}
-              {/* {console.log(name[1])} */}
-            </div>
-          ))}
+          contents
+            .filter((name) => {
+              if (keywordValue === "") {
+                // CHECKS IF KEYWORD IS EMPTY
+                console.log(name)
+                //NAME IS AN ARRAY WHERE INDEX 0 IS THE LETTER AND INDEX 1 IS THE OBJECT WITH WORD AND DEFINITIONS
+                return name
+              } else if (name[0].toLowerCase().includes(keywordValue)) {
+                // CHECKS IF KEYWORD IS IN NAME
+
+                // console.log(name[0].toLowerCase().includes(keywordValue))
+                const arrayGrab = Object.keys(name[1])
+                console.log(arrayGrab)
+                // GRABS THE WORDS, NO DEFINITIONS, AND IS SET IN ARRAY
+
+                console.log(Object.values(name[1]))
+                // LOGS THE DEFINITIONS BUT NO WORDS
+
+                const toLowerCase = arrayGrab.map((words) => {
+                  return words.toLowerCase()
+                })
+                // CONVERTS THE WORDS TO LOWERCASE
+
+                console.log(toLowerCase)
+                return toLowerCase
+              }
+            })
+            .map((name, index) => (
+              <>
+                {console.log(keywordValue)}
+                <ContentCard name={name} key={index} />
+              </>
+            ))}
       </CardGroup>
     </Container>
   )

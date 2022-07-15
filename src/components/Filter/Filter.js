@@ -1,19 +1,18 @@
 import { Card, Form } from "react-bootstrap"
 import "./Filter.scss"
-import { useState, useEffect } from "react"
+import { useState, useEffect, createContext } from "react"
 
 const Filter = ({ type, filter, data, setKeywordValue }) => {
-  // console.log(data)
-  const [filtered, setFiltered] = useState([])
+  const [filtered, setFiltered] = useState("")
 
   useEffect(() => {
     let newContents = Object.entries(data)
-    // console.log(newContents)
     setFiltered(newContents)
   }, [data])
 
   const handleChange = (e) => {
-    setKeywordValue(e.target.value)
+    setKeywordValue(e.target.value.toLowerCase())
+    // GRABS SEARCH BAR VALUE AND CONVERTS TO LOWERCASE, THEN PASSES TO APP.JS
   }
   return (
     <Card className="filterCard">
