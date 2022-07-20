@@ -1,6 +1,7 @@
 import { Card, Form } from "react-bootstrap"
 import "./Filter.scss"
-import { useState, useEffect, createContext } from "react"
+import { useState, useEffect, useContext } from "react"
+import { FilterContext } from "../../FilterContext"
 
 const Filter = ({ type, filter, data, setKeywordValue }) => {
   const [filtered, setFiltered] = useState("")
@@ -12,6 +13,7 @@ const Filter = ({ type, filter, data, setKeywordValue }) => {
 
   const handleChange = (e) => {
     setKeywordValue(e.target.value.toLowerCase())
+    console.log(data)
     // GRABS SEARCH BAR VALUE AND CONVERTS TO LOWERCASE, THEN PASSES TO APP.JS
   }
   return (
