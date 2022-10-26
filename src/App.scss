@@ -14,3 +14,28 @@ $sec-text: #0a0a0a;
 	display: flex;
   flex-direction: row;
 }
+
+.App .nav .active {
+	background: $secondary;
+	text-decoration: underline;
+	color: $sec-text;
+	text-shadow: 0 0 5px $accent;
+}
+
+@media screen and (min-width: 768px) {
+	.App .tab-content .active {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-items: flex-start;
+		.contentCard {
+			width: 30%;
+		}
+		.card-active {
+			order: -1;
+			width: 300%;
+		}
+	}
+
+	
+}

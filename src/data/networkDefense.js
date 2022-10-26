@@ -1,4 +1,4 @@
-const data = {
+const networkDefense = {
 	A: {
 		Availability:
 			'Ensures information is available to authorized parties without any disruption.',
@@ -851,4 +851,4 @@ const data = {
 	Z: {},
 };
 
-export default data;
+export default networkDefense;

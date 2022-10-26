@@ -20,7 +20,7 @@ const SubContentCard = ({ definitions }) => {
 	}, []);
 
 	return (
-		<Card className="innerCard">
+		<Card className={`innerCard`}>
 			<Card.Title onClick={handleClick}>
 				<h5>{term}</h5>
 			</Card.Title>

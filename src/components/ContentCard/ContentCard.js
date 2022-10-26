@@ -18,7 +18,7 @@ const ContentCard = ({ name }) => {
 	}, []);
 
 	return (
-		<Card className={`contentCard ${name[0].toLowerCase()}`}>
+		<Card className={`contentCard ${name[0].toLowerCase()} ${show ? "card-active" : ""}`}>
 			<Card.Header onClick={handleClick}>{name[0]}</Card.Header>
 			{show && (
 				<>
