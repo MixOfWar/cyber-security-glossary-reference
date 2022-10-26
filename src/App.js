@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Container, CardGroup, Tab, Tabs } from 'react-bootstrap';
+import { Container, Tab, Tabs } from 'react-bootstrap';
 import { Header, ContentCard} from './components';
 import { digitalForensics, ethicalHacking, networkDefense } from './data/index.js';
 import './App.scss';
